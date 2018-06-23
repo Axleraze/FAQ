@@ -1,0 +1,244 @@
+******
+ GIT  
+******
+
+	1)  Идем в папку где будет проект и выполняем первичные настройки:
+git config --global user.name "Axle"
+git config --global user.mail "axleraze@gmail.com"
+	
+	2) Инициализируем и проверяем статус
+git init
+git status
+
+	3) Предположительно уже имеется файл и добавляем его чтоб гит смог  трекать и проверяем, появившийся файл должен подсвечиваться красным
+git add py3-common.txt
+git status
+
+	4) Создаем в этой же папке игнор файл, куда будем заносить файлы и папки, которые не хотим чтоб видел гит. В этот файл будем добавлять навзания того что не надо трекать. Каждый файл или папка - новая строка. Добавляем гитигнор в гит.
+touch .gitignore
+git add .
+
+	5) Делаем первый коммит с коментарием:
+git commin -m "Initial commt"
+
+	6)  Создаем акк на гитхаб, допустим. И добавляем туда ключи безопастности.
+	Надо создат такой ключ. И скопироват его на гитхаб.
+ssh-keygen -t rsa -b 4096 -C "axleraze@gmail.com"
+
+	7) Толкаем наш комит в дефолтную зоданную гитом ветку мастер. Ура!!
+git push -u origin master
+
+	8) Проверяем
+git show-ref
+
+
+
+
+
+
+------------------------------------------
+
+	## Посмотреть какие ветки есть уже
+git branch
+git branch -vv 
+
+	## Reset all cheges back to 13 position and update after that:
+git reset --hard HEAD~13; git clean -f -d; git pull
+
+
+	## Create new repository:
+git init project-name
+
+
+	## Clone repository from remote host:
+git clone git@bitbucket.org:afiskon/hs-textgen.git
+
+
+	## Clone repo by ssh from remote host:
+git config --bool core.bare true
+
+
+	## Посмотреть версию ветки
+git rev-parse HEAD
+
+""" Refusing to update checked out branch: 
+refs/heads/master
+By default, updating the current branch in a non-bare repository
+is denied, because it will make the index and work tree inconsistent
+with what you pushed, and will require 'git reset --hard' to match
+the work tree to HEAD."""
+
+
+	## Add file to repository:
+git add text.txt
+
+
+	## Delete file frim repository:
+git rm text.txt
+
+
+	## Check vurrent state of repository:
+git status
+
+
+	## Make commit:
+git commit -a -m "Commit description"
+
+
+	## MAke commit with description:
+git commit -a
+
+
+	## Merge all branches of local repo to remote repo:
+git push origin
+
+
+ 	## Push all branches of local repo to master:
+ git push origin master
+
+
+	## Push currebt branch without tyoing all her name: 
+git push origin HEAD
+
+
+З	## Merge all branches from remote repository: 
+git pull origin
+
+
+	## Аналогично предыдущему, но накатывается только ветка master:
+git pull origin master
+
+
+	## Накатить текущую ветку, не вводя ее длинное имя:
+git pull origin HEAD
+
+
+	## Push one exemplars of code to sevral repositories:
+git remote add remotename git@gitlab.example.ru:repo.git
+
+
+---
+Скачать все ветки с origin, но не мержить их в локальный репозиторий:
+git fetch origin
+
+Аналогично предыдущему, но только для одной заданной ветки:
+git fetch origin master
+
+Начать работать с веткой some_branch (уже существующей):
+git checkout -b some_branch origin/some_branch
+
+Создать новый бранч (ответвится от текущего):
+git branch some_branch
+
+Переключиться на другую ветку (из тех, с которыми уже работаем):
+git checkout some_branch
+
+Получаем список веток, с которыми работаем:
+git branch # звездочкой отмечена текущая ветвь
+
+Просмотреть все существующие ветви:
+git branch -a # | grep something
+
+Замержить some_branch в текущую ветку:
+git merge some_branch
+
+Удалить бранч (после мержа):
+git branch -d some_branch
+
+Просто удалить бранч (тупиковая ветвь):
+git branch -D some_branch
+
+История изменений:
+git log
+
+История изменений в обратном порядке:
+git log --reverse
+
+История конкретного файла:
+git log file.txt
+
+Аналогично предыдущему, но с просмотром сделанных изменений:
+git log -p file.txt
+
+История с именами файлов и псевдографическим изображением бранчей:
+git log --stat --graph
+
+Изменения, сделанные в заданном коммите:
+git show d8578edf8458ce06fbc5bb76a58c5ca4a58c5ca4
+
+Посмотреть, кем в последний раз правилась каждая строка файла:
+git blame file.txt
+
+Удалить бранч из репозитория на сервере:
+git push origin :branch-name
+
+Откатиться к конкретному коммиту (хэш смотрим в «git log»):
+git reset --hard d8578edf8458ce06fbc5bb76a58c5ca4a58c5ca4
+
+git reset --hard b47c061bd07794949202ca1a35c9bcc3bbc2bd6c
+
+
+Аналогично предыдущему, но файлы на диске остаются без изменений:
+git reset --soft d8578edf8458ce06fbc5bb76a58c5ca4a58c5ca4
+
+Попытаться обратить заданный commit (но чаще используется branch/reset + merge):
+git revert d8578edf8458ce06fbc5bb76a58c5ca4a58c5ca4
+
+Просмотр изменений (суммарных, а не всех по очереди, как в «git log»):
+git diff # подробности см в "git diff --help"
+
+Используем vimdiff в качестве программы для разрешения конфликтов (mergetool) по умолчанию:
+git config --global merge.tool vimdiff
+
+Отключаем диалог «какой mergetool вы хотели бы использовать»:
+git config --global mergetool.prompt false
+
+Отображаем табы как 4 пробела, например, в «git diff»:
+git config --global core.pager 'less -x4'
+
+Создание глобального файла .gitignore:
+git config --global core.excludesfile ~/.gitignore_global
+
+Разрешение конфликтов (когда оные возникают в результате мержа):
+git mergetool
+
+Создание тэга:
+git tag some_tag # за тэгом можно указать хэш коммита
+
+Удаление untracked files:
+git clean -f
+
+«Упаковка» репозитория для увеличения скорости работы с ним:
+git gc
+
+Иногда требуется создать копию репозитория или перенести его с одной машины на другую. Это делается так:
+mkdir -p /tmp/git-copy
+cd /tmp/git-copy
+git clone --bare git@example.com:afiskon/cpp-opengl-tutorial1.git
+cd cpp-opengl-tutorial1.git
+git push --mirror git@example.com:afiskon/cpp-opengl-tutorial2.git
+Следует отметить, что Git позволяет использовать короткую запись хэшей. Вместо «d8578edf8458ce06fbc5bb76a58c5ca4a58c5ca4» можно писать «d8578edf» или даже «d857».
+
+Дополнение: Также в 6-м пункте Мини-заметок номер 9 приводится пример объединения коммитов с помощью git rebase, а в 10-м пункте Мини-заметок номер 11 вы найдете пример объединения двух репозиториев в один без потери истории.
+
+
+Работа с сабмодулями
+Более подробно сабмодули и зачем они нужны объясняется в заметке Простой кроссплатформенный OpenGL-проект на C++. Здесь упомянем самое главное.
+
+Добавить сабмодуль:
+git submodule add https://github.com/glfw/glfw glfw
+
+Инициализация сабмодулей:
+git submodule init
+
+Обновление сабмодулей, например, если после git pull поменялся коммит, на который смотрит сабмодуль:
+git submodule update
+
+
+Удаление сабмодуля производится так:
+	Скажите git rm --cached имя_сабмодуля;
+	Удалите соответствующие строчки из файла .gitmodules;
+	Также грохните соответствующую секцию в .git/config;
+	Сделайте коммит;
+	Удалите файлы сабмодуля;
+	Удалите каталог .git/modules/имя_сабмодуля;
