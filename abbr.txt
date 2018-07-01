@@ -1,0 +1,696 @@
+
+3110/3210 mode	-- FW is running on MCPU only (no ASW, ACPU is off). Available only in FFH mode. 
+mTools is running 3110 mode exclusively
+
+
+3120/3220 mode	-- FW is running on both MCPU(LTE stack) and ACPU (ASW). Could run in FFH and FFF mode
+
+
+3GPP -- 3rd Generation Partnership Project
+
+
+ACM --  "Abstract Control Model",  Emulation of a Virtual COM-port using the ACM,  CDC Serial 
+
+
+ACPU -- Application CPU. It runs Linux and ASW software. Тут OpenWrt Linux крутится как раз
+
+
+APT	-- Average Power Tracking. Use to modulate the power amplifier voltage to reduce power consumption
+
+
+ARQ -- Automatic Repeat Request
+
+
+ASC0 -- Serial interface,  8-wire unbalanced, asynchronous modem interface ASC0 conforming to ITU-T V.24 protocol DCE signalling
+
+
+ASW -- 	Application Software : SW components running on ACPU + drivers and associated tools. Includes sequansd, IMS, OMADM, OpenWRT…
+ASW: Application SoftWare (= Host)
+
+
+AT -- ATtention, used to start a command line.
+
+
+BCH -- broadcast channel
+
+
+BCCH -- broadcast control channel
+
+
+BCPU -- See MCPU
+
+
+BER -- Channel bit error rate 
+
+
+BSS --  base station subsystem 
+/- Um -- The air interface between the mobile station (MS) and the BTS. This interface uses LAPDm protocol for signaling, to conduct call control, measurement reporting, handover, power control, authentication, authorization, location update and so on. Traffic and signaling are sent in bursts of 0.577 ms at intervals of 4.615 ms, to form data blocks each 20 ms.
+
+/- Abis -- The interface between the BTS and BSC. Generally carried by a DS-1, ES-1, or E1 TDM circuit. Uses TDM subchannels for traffic (TCH), LAPD protocol for BTS supervision and telecom signaling, and carries synchronization from the BSC to the BTS and MS.
+
+/- A -- The interface between the BSC and MSC. It is used for carrying traffic channels and the BSSAP user part of the SS7 stack. Although there are usually transcoding units between BSC and MSC, the signaling communication takes place between these two ending points and the transcoder unit doesn't touch the SS7 information, only the voice or CS data are transcoded or rate adapted.
+
+/- A -- The interface between the BSC and transcoder. It is a proprietary interface whose name depends on the vendor (for example Ater by Nokia), it carries the A interface information from the BSC leaving it untouched.
+
+/- Gb --  Connects the BSS to the SGSN in the GPRS core network.
+
+
+BTS -- base transceiver station -- piece of equipment that facilitates wireless communication between user equipment (UE) and a network. 
+
+
+C-plane -- Control Plane
+
+
+CA -- carrier aggreration
+
+
+CBS -- Cell Broadcast Service
+
+
+cid -- context identifier
+
+
+CBM --  Cell Broadcast Message.
+
+
+CBS -- cell broadcast service
+
+
+CCCH -- common control channel
+
+
+CDC -- Communication Device Class
+
+
+CFUN --  Cell function
+
+
+CDR --  Customer Delivery Release
+
+
+CINR -- Carrier to Interference + Noise Ratio
+
+
+CN -- core network
+
+
+CQI -- Channel Quality Indicator
+
+
+CP -- Cyclic Prefix
+
+
+CRC -- Cyclic Redundancy Check
+
+
+CS Mode -  Circuit switched (CS) voice 
+
+CT -- Certification Tests - compliance with standard specifications
+
+
+DCCH - dedicated control channel
+
+
+DCE -- Data Communication Equipment
+
+
+DCI --  Downlink Control Information 
+
+
+DL -- downlink
+
+
+DL-SCH -- downlink sharred channel
+
+
+DROP --  preliminary delivery to a customer while project development is not yet finished
+
+
+DRX --  Discontinuous Reception
+ 
+
+DTCH - dedicated traffic channel
+
+
+DTE -- Data Terminal Equipment, this refers to the host device/application.
+
+DTX -- Discontinuous Transmission
+ 
+
+EARFCN -- E-UTRA Absolute Radio Frequency Channel Number
+
+
+ECM -- "Ethernet Networking Control Model",  CDC Ethernet
+
+
+eNodeB -- Evolved Node B -- It is the hardware that is connected to the mobile phone network that communicates directly wirelessly with mobile handsets (UEs), like a base transceiver station (BTS) in GSM networks.
+
+
+EC  -- Environmental chamber
+
+
+EPS -- evolved packet system = E-UTRAN + EPC
+
+
+EPC -- evolved packet core (or SAE Core)
+
+
+E-UTRAN -- Evolved Universal Terrestrial Radio Access Network
+
+
+FCA and GCA --  (First/General customer availability): Hardware deliveries
+
+
+FDD -- frequency division duplexing (Дуплексный канал с частотным разделением  -- тип дуплексной связи, при котором каналы загрузки и передачи данных находятся на разных частотных диапазонах. Интерференции сигналов нет. В силу этого такой тип связи лучше нежели таковая с временным разделением в сетях wireless broadband для симметричного трафика)
+
+
+FFF -- Firmware from Flash. The firmware is stored on flash, there is no need for host to boot the board
+
+
+FFH -- Firmware from host. The firmware is loaded from host to boot the board
+
+
+FFS -- flash file system 
+
+
+FFT -- fast-fourier transformation
+
+
+FT -- Field Tests: robustness/reliability in hostile environment
+
+
+GBR --  guaranteed bit rate
+
+
+GGSN -- Gateway GPRS Support Node --  is a main component of the GPRS network which responsible for the interworking between the GPRS network and external packet switched networks, like the Internet and X.25 networks. 
+
+
+GPIO -- General-purpose input/output is a generic pin on an integrated circuit or computer board whose behavior—including whether it is an input or output pin—is controllable by the user at run time. 
+
+
+IE -- Information Elements
+
+IMEI -- International Mobile station Equipment Identity.
+
+
+IOT -- Inter-Operability Tests - inter-operability with network infrastructure
+
+
+HARQ -- hybrid automatic repeat request
+
+
+HSS -- home subscriber server --  main IMS database that contains Authentication Informatiom and Subscriber's Data: services associated, location , IP information. Use DIAMETER protocol for AAA
+
+
+HO --  handover
+
+
+HSDPA -- High-Speed Downlink Packet Access 
+
+
+HSUPA -- High Speed Uplink Packet Access
+
+
+IBB -- In Band Blocking
+
+
+IE --	Information Element
+
+
+IMS - IP miltimedia subsystem
+
+
+ISI	-- Inter Symbol Interference
+
+
+JTAG -- Joint Test Access Group
+
+
+LPM -- Low Power mode: all HW/SW dev used to reduce power consumption. See LPM Demo HowTo on VZ22Q
+
+
+LPU -- Layer 1 CPU
+
+
+MAC -- 	Medium access layer
+
+
+mATE -- manufacturing Automatic Test Equipment
+
+
+MCH -- multicast channel
+
+
+MCCH -- multicast control channel
+
+
+MCPU -- Modem CPU. MIPS processor running the MFW/LTE stack. Also called BCPU. Тут крутятся АТ команды
+
+
+MFW -- Modem FW : LTE stack running on MCPU and xPUs.
+
+
+MFW: Middle FirmWare (= Core)
+
+
+MII --   RJ-45  connector or jack on board 
+
+
+MME -- Mobile Management Entity -- sceirity procedured end-user autentication, terminal-to network session handling, PDN-GW and S-GW selection, handover, roamnong, idle-mode control, termination point of the NAS
+
+
+MPU -- 	Measurement PU : responsible of CQI/PMI/RI measurement and computation
+
+
+MRC	-- Maximum Ratio Combining
+
+
+MS -- mobile station
+
+
+MT -- Mobile Terminal
+
+MTCH -- multicast traffic channel
+
+
+mTools	 -- FW running on boards for manufacturing purposes (calibration, screening, HW qualification). 
+It includes only L1 code + very light L2 + services for manufacturing.
+
+
+NCM -- "Network Control Model"  Using CDC_NCM you can create Ethernet-over-USB applications.
+
+
+MCS -- Modulation and Coding Scheme 
+
+
+ME -- Mobile Equipment, refers to the modem.
+
+
+MIMO --  multiple input multiple output
+
+
+MIP -- Mobile IP
+
+
+MME -- Mobility Management Entity
+
+MRC	-- Maximum Ratio Combining 
+
+MS -- Mobile Station
+
+
+MT -- Mobile Terminal
+
+
+MTS -- Mobile Telephone Service 
+
+
+MXA	-- Agilent equipment for spectrum and vector analysis
+
+
+MXG -- 	Agilent equipment for generation of tone and waveform
+
+
+NAS -- non-access stratum
+
+
+OBW	-- Occupied bandwidth
+
+
+OFDM --	Orthogonal Frequency-Division Multiplexing
+
+
+OFDMA	-- Orthogonal Frequency-Division Multiplexing Access
+
+
+PBCH -- physical broadcast channel
+
+
+PCFICH -- physical cintrol format indicator channel
+
+PCC	-- Primary Component Carrier
+
+PCH -- paging channel
+
+
+PCCH -- paging control channel
+
+
+PDCCH -- physical downlink control channel 
+
+
+PDSCH -- Physical Downlink Shared Channel
+
+
+PDCP -- packet data convergence protocol
+
+
+DCP connection --  Device Control Protocol (DCP) is an application level protocol optimized for the integration, monitoring and control of devices or "things" on a network.
+http://dcp.chrisarmbruster.com/
+
+
+PDN -- packet data network
+
+
+PDN-GW  --  packet data network gateaway
+
+
+PDSCH -- physical downlink shared channel
+
+
+PDU -- Protocol data unit
+
+
+PDU -- Packet data unit
+
+
+PDU mode -- Protocol Description Unit mode (using for SMS)
+
+
+PDP --  packet data protocol
+
+
+PER	-- Packet Error Rate
+
+
+PHICH -- physical HARQ indicator channel
+
+
+PHY	-- Physical layer
+
+
+PID -- Product ID
+
+
+PIN -- Personal Indentification Number, 4 digit code used to protect the SIM.
+
+
+PL_mode - Power Limitation Mode
+
+
+PLMN -- Public Land Mobile Network
+
+
+PMCH -- physical multicast channel
+
+
+PPU -- Packet PU : responsible for DCI decoding/HARQ handling
+
+
+PRL --  product release
+
+
+PS Mode - Packet switch mode
+
+
+PSI -- platform specific information
+
+
+PSMS -- Power Saving Mode Setting
+
+
+PUK -- Unblocking Key, 8 digit code used to unblock SIM PIN.
+
+
+QoS -- quality of service
+
+
+QCI -- QoS Class Identifier 
+Article for QoS resouce types:https: www.netmanias.com/en/post/blog/5933/lte-qos/lte-qos-part-2-lte-qos-parameters-qci-arp-gbr-mbr-and-ambr
+
+
+QoS GBR -- Guaranteed Bit Rate - resource type
+
+
+QoS APR -- Allocation and Retention Priority
+
+
+RAN -- radio access network -- Conceptually, it resides between a device such as a mobile phone, a computer, or any remotely controlled machine and provides connection with its core network (CN). Depending on the standard, mobile phones and other wireless connected devices are varyingly known as user equipment (UE), terminal equipment, mobile station (MS), etc. RAN functionality is typically provided by a silicon chip residing in both the core network as well as the user equipment.
+
+
+RAT -- radio access network 
+
+
+RB --  Resource Blocks
+
+
+RF -- radio frequency
+
+
+RLC -- radio link control
+
+
+RLP --  Radio Link Protocol
+
+
+RNC -- Radio Network Controller
+
+
+RRC -- radio resource control. It is a layer that exists between UE and eNB and exists at the IP level
+
+
+RSCP -- Received signal code power
+
+
+RSRP -- Reference signal received power 
+
+
+RSRQ -- Reference signal received quality
+
+RSSI -- Received Signal Strength Indicator
+
+RXLEV -- Received signal strength level 
+
+
+RX -- Receive.  Note that these metrics are referenced to the server being monitored; Transmit FROM this server, and Receive TO this server.
+
+
+S3Lte	-- Sequans Communication LTE Stack
+
+
+SAE -- System Architecture Evolution - core network architecture of 3GPP's LTE wireless communication standard
+
+
+SAR -- Specific absorption rate -- a measure of the rate at which energy is absorbed by the human body when exposed to a radio frequency (RF) electromagnetic field
+
+
+SC -- service centre
+
+
+SCC	-- Secondary Component Carrier
+
+SFBC -- Space Frequency Block Coding
+
+SFP -- Small Form-factor Pluggable
+
+
+SME -- short message entity
+
+
+SMS-MO -- Short Message Service Mobile Originated
+
+
+SMS-MT -- Short Message Service Mobile Terminated
+
+
+SRB -- Signaling Radio Bearer
+
+
+SS	-- System Simulator (used as eNodeB)
+
+
+TDD -- time division duplexing (Дуплексный канал с временным разделением --  при котором каналы передачи и загрузки данных отделены распределением временных слотов на одном и том же диапазоне частот. Потоки передачи данных таким образом могут быть асимметричными с выделением конечному пользователю разных временных интервалов на передачу и загрузку данных.)
+
+
+THP -- Target Host Protocol
+
+
+THP -- throughput of a flow
+
+
+THP -- Traffic handling priority
+  
+
+TIS -- Total Isotropic Sensitivity
+
+
+TM3	-- Transmission Mode 3 equivalent to Open-Loop Spatial Multiplexing
+
+
+TX -- Transmit.  Note that these metrics are referenced to the server being monitored; Transmit FROM this server, and Receive TO this server.
+
+
+TXDR	Transmit Dynamic Range
+
+
+S-GW -- serving gateway
+
+
+SIM -- Subscriber Identity Module.
+
+
+SMS --  Short Message Service
+
+
+SPU	-- Synchonization PU : responsible to detect/measure cells and track timing
+
+
+SPDU -- service protocol data unit
+
+
+STS -- System Test Specification
+
+
+TA --  Terminal Adapter, refers to the modem.
+
+
+TAPI -- Telephone APplication Interface.
+
+
+TE -- Terminal Equipment, refers to the host device/application
+
+
+TIA -- Telecommunications Industry Association.
+
+
+TM3	-- Transmission Mode 3 equivalent to Open-Loop Spatial Multiplexing
+
+
+tosca -- type of address for SC (161 - national format, 145 - international format)
+
+
+TXDR -- Transmit Dynamic Range
+
+
+UART -- Universal Asynchronous Receiver/Transmitter - универсальный асинхронный приёмопередатчик, интерфейс для связи цифровых устройств, предназначенный для передачи данных в последовательной форме. Очень распространён и весьма востребован, имеет аппаратную реализацию во многих микроконтроллерах. 
+
+
+UC / TP  -- Uce Case / Test Point
+
+
+UE -- 	User equipment ⇒ LTE device
+
+
+UE FW --  Full FW including L1 and full LTE stack
+
+
+UL -- 	Uplink
+
+
+UMTS -- Universal Mobile Telecommunications System  21 Мбіт
+
+
+URC --  Unsolicited Result Code -- report message issued by the ME without being requested by the TE, i.e. a URC is issued automatically when a certain event occurs. Hence, a URC is not issued as part of the response related to an executed AT command.
+
+
+USART  -- Universal Synchronous-Asynchronous Receiver/Transmitter - универсальный синхронно-асинхронный приёмопередатчик - аналогичный UART интерфейс, но дополнительно к возможностям UART, поддерживает режим синхронной передачи данных - с использованием дополнительной линии тактового сигнала. Впрочем, синхронная передача используется гораздо реже асинхронной.
+
+
+UTRAN -- UMTS Terrestrial Radio Access Network
+
+
+V.250 : Serial asynchronous automatic dialling and control
+
+
+VID --  Vendor ID 
+
+
+VSA --	Vector Signal Analyzer
+
+
+VSG	-- Vector Signal Generator	
+
+
+ZSP	DSP --  responsible for downlink signal processing
+
+
+
+=================
+SMS related abbr
+==================
+
+cdata -- Command Data
+ct -- Command Type 
+da -- Destination Address
+data -- User Data 
+dsc -- Data Coding Scheme
+dt -- Discharge Time -- characters indicate year, month, day, hour, min, sec and time zone.
+fo -- First Octet
+lenght -- Message Length
+mid -- Message Indentifier
+ME -- Mobile Equipment
+MT -- Mobile Terminal 
+
+mem1 -- Memory to be used when listing, reading and deleting messages: ME, SM, SR
+mem2 -- Memory to be used when writing and sending messages: ME, SM
+mem3 -- Memory to be used Received messages will be placed there if routing to TE is not set.
+
+mn -- Message Number
+mr -- Message Reference
+<mt> -- Mobile Terminated Messages: 1/0
+<mo> -- Mobile Originated Messages: 1/0
+<bm> -- Broadcast Type Messages: 1/0
+oa -- Originating Address
+ra -- Recipient Address
+page -- Page Parameter
+sca -- Service Center Address
+scts -- Service Centre Time Stamp
+sn -- Serial Number
+
+<service> -- 
+
+SM – SIM message storage # Память SIM-карты 
+ME – Mobile Equipment message storage # Память модема/телефона
+MT – Это общая память SIM-карты и модема, т.е. MT = SM+ME
+BM – Broadcast messages # Память для широковещательных сообщений сети
+SR – Status report message storage # Память для отчетов (о доставке и т.п.)
+
+
+st -- Status -- TP-Status in integer format
+stat -- Message status - Indicates the status of message in memory:text mode=1 / PDU mode=0
+	Received unread messages : "REC UNREAD"/0
+	Received read messages : "REC READ"/1
+	Stored unsent messages : "STO UNSENT"/2
+	Stored sent messages: "STO SENT"/3
+	All messages:  "ALL"/4
+
+toda -- Type of Destination Address
+tooa -- Type of Originating Address
+tora -- Type of Recipient Address
+tosca -- Type of Service Center Address
+vp -- Validity Period
+
+delflag -- 0 - delete the message specified in <index>; 1 - Delete all read messages from preferred message storage, leaving unread messages and stored mobile originated messages (whether sent or not) untouched; 2 - Delete all read messages from preferred message storage and sent mobile originated messages, leaving unread messages and unsent mobile originated messages untouched.; 3 - Delete all read messages from preferred message storage, sent and unsent mobile originated messages leaving unread messages untouched; 4 - Delete all messages from preferred message storage including unread mes- sages.
+
+ MO SMS -- Mobile Originated  SMS (отправленные)
+ MT SMS -- Mobile Terminated SMS (полученные)
+
+AT+IMSCLI="IMSD_CFG::showSMSConfig" -- show sms config
+
+AT+CMGC Send Command
+
+AT+CMGD -- Delete message - deletes sms from the preferred  <mem1> location <index>. If <delflag> is set and not != 0, then the ME shall ignore <index> and use rules for <delflag>
+
+AT+CMGF -- Message format: 0 - PDU mode (default); 1 - Text mode.
+
+AT+CMGL -- List Messages
+
+AT+CMGW --  Write Messages to Memory - transmit a short message from TE to memory storage <mem2>.
+
+
+
+
+Порядок обмена по интерфейсу RS-232C
+=======================================
+
+DCD	IN	Carrie Detect (Определение несущей)	8	1
+RXD	IN	Receive Data (Принимаемые данные)	3	2
+TXD	OUT	Transmit Data (Передаваемые данные)	2	3
+DTR	OUT	Data Terminal Ready (Готовность терминала)	20	4
+GND	-	System Ground (Корпус системы)	7	5
+DSR	IN	Data Set Ready (Готовность данных)	6	6
+RTS	OUT	Request to Send (Запрос на отправку)	4	7
+CTS	IN	Clear to Send (Готовность приема)	5	8
+RI	IN	Ring Indicator (Индикатор)	22	9
+
+
